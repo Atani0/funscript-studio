@@ -9,6 +9,7 @@ release/
 out/
 outputs/
 work/
+tools/
 *.zip
 *.7z
 *.rar
