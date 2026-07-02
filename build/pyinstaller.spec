@@ -1,0 +1,70 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+from pathlib import Path
+
+ROOT = Path.cwd()
+BACKEND = ROOT / "backend"
+
+a = Analysis(
+    [str(BACKEND / "main.py")],
+    pathex=[str(BACKEND)],
+    binaries=[],
+    datas=[],
+    hiddenimports=[
+        "audio_analysis",
+        "video_analysis",
+        "generator",
+        "perception",
+        "perception.audio_analyzer",
+        "perception.feature_fusion",
+        "perception.frame_sampler",
+        "perception.interaction_analyzer",
+        "perception.multi_person_tracker",
+        "perception.perception_engine",
+        "perception.perception_schema",
+        "perception.pose_analyzer",
+        "perception.shot_analyzer",
+        "perception.style_classifier",
+        "perception.visual_analyzer",
+        "generation",
+        "generation.action_synthesizer",
+        "generation.event_candidate_extractor",
+        "generation.motion_planner",
+        "generation.quality_metrics",
+        "learning",
+        "learning.deep_model_interface",
+        "learning.hybrid_generator",
+        "learning.learned_profile",
+        "learning.parameter_fitter",
+        "learning.perception_aligner",
+        "learning.script_feature_extractor",
+        "learning.similarity_index",
+        "learning.training_dataset",
+    ],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+)
+pyz = PYZ(a.pure)
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name="funscript-backend",
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=True,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+)

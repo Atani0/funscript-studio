@@ -1,0 +1,44 @@
+{
+  "name": "funscript-studio-mvp",
+  "version": "0.1.0-alpha.1",
+  "private": false,
+  "author": "Funscript Studio",
+  "description": "Productized desktop funscript editor with event-driven generation",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "node scripts/start-app.cjs",
+    "dev:raw": "concurrently -k \"vite\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "start-app": "node scripts/start-app.cjs",
+    "compile": "tsc -b && vite build --config vite.config.sandbox.mjs --configLoader native && tsc -p electron/tsconfig.json",
+    "build:backend": "pyinstaller build/pyinstaller.spec",
+    "build": "npm run compile",
+    "build:win": "npm run compile && electron-builder --win --config build/electron-builder.json",
+    "build:mac": "npm run compile && electron-builder --mac --config build/electron-builder.json",
+    "pack": "npm run compile && electron-builder --dir --config build/electron-builder.json",
+    "preview": "electron .",
+    "test": "python -m pytest tests",
+    "start": "electron .",
+    "package": "npm run pack",
+    "dist": "npm run build",
+    "typecheck": "tsc -b --pretty false"
+  },
+  "dependencies": {
+    "ffmpeg-static": "5.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.5.2",
+    "concurrently": "^9.2.0",
+    "cross-env": "^7.0.3",
+    "electron": "^36.4.0",
+    "electron-builder": "^26.0.12",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "wait-on": "^8.0.3"
+  },
+  "build": "See build/electron-builder.json"
+}

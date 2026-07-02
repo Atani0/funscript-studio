@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Frontend / Electron build output
+dist/
+dist-electron/
+release/
+out/
+outputs/
+work/
+*.zip
+*.7z
+*.rar
+
+# Python build output and caches
+build/pyinstaller/
+build/**/*.toc
+build/**/*.pkg
+build/**/*.pyz
+build/**/*.html
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local config and secrets
+.env
+.env.local
+.env.*.local
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# User data, generated data, and media
+data/*
+!data/.gitkeep
+perception_outputs/
+backend/perception_outputs/
+*.mp4
+*.mkv
+*.webm
+*.avi
+*.mov
+*.m4v
+*.flv
+*.ts
+*.m2ts
+*.mts
+*.vob
+*.mpg
+*.mpeg
+*.wmv
+*.asf
+*.funscript

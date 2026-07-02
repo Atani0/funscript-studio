@@ -1,0 +1,5 @@
+opencv-python>=4.8
+numpy>=1.24
+pyinstaller>=6.0
+# 可选：安装后 PoseAnalyzer 会优先使用 MediaPipe；未安装时自动回退到 optical-flow fallback。
+mediapipe>=0.10.14

@@ -1,0 +1,4 @@
+# Minimal development, test, and packaging dependencies.
+# Runtime analysis modules have local fallbacks when optional CV packages are absent.
+pytest>=8.0
+pyinstaller>=6.0

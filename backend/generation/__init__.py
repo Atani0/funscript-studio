@@ -1,0 +1,2 @@
+"""Hybrid generation primitives."""
+

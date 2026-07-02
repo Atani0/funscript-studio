@@ -1,0 +1,45 @@
+{
+  "appId": "com.funscript.studio",
+  "productName": "Funscript Studio",
+  "directories": {
+    "output": "release"
+  },
+  "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "backend/**/*",
+    "!backend/perception_outputs/**/*",
+    "!backend/**/__pycache__/**/*",
+    "!backend/**/*.pyc",
+    "!backend/**/*.pyo",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "backend",
+      "to": "backend",
+      "filter": [
+        "**/*",
+        "!perception_outputs/**/*",
+        "!**/__pycache__/**/*",
+        "!**/*.pyc",
+        "!**/*.pyo"
+      ]
+    }
+  ],
+  "asarUnpack": [
+    "node_modules/ffmpeg-static/**/*"
+  ],
+  "npmRebuild": false,
+  "nodeGypRebuild": false,
+  "win": {
+    "target": "nsis"
+  },
+  "mac": {
+    "target": "dmg"
+  },
+  "linux": {
+    "target": "AppImage"
+  }
+}
