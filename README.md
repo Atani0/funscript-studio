@@ -1,30 +1,49 @@
 # Funscript Studio
 
-**涓枃 | [English](#english)**
+**中文 | [English](#english)**
 
-Funscript Studio 鏄竴涓湰鍦颁紭鍏堢殑妗岄潰绔?funscript 缂栬緫鍣ㄤ笌鐢熸垚宸ュ叿锛岄潰鍚戣棰戞挱鏀俱€佹椂闂磋酱绮句慨銆佹劅鐭ュ眰鍒嗘瀽銆佹贩鍚堢敓鎴愩€佽剼鏈鍑哄拰鍙€夌殑 OSR2/SR6 璁惧棰勮璋冭瘯銆?
-褰撳墠鐗堟湰锛?*0.1.0-alpha.1**
+Funscript Studio 是一个本地优先的桌面端 funscript 编辑器与生成工具，面向视频播放、时间轴精修、感知层分析、混合生成、脚本导出和可选的 OSR2/SR6 设备预览调试。
 
-> 杩欐槸涓€涓?Alpha / Preview 棰勫彂甯冪増鏈紝浠嶅湪蹇€熻凯浠ｄ腑銆傚缓璁厛鍦ㄦ祴璇曠洰褰曚腑瑙ｅ帇杩愯銆?
-## 涓枃
+当前版本：**0.1.0-alpha.1**
 
-### 椤圭洰绠€浠?
-Funscript Studio 浣跨敤 Electron + React + TypeScript 鏋勫缓妗岄潰 UI锛屽苟閫氳繃鏈湴 Python 鍚庣杩涜闊抽銆佽棰戙€佷汉浣撳姩浣溿€佷簰鍔ㄥ己搴﹀拰闀滃ご鎰熺煡鍒嗘瀽銆傚畠鐨勭洰鏍囨槸鎶娾€滆棰?鈫?鑷姩鐢熸垚鑴氭湰 鈫?鍙鍖栫紪杈?鈫?瀵煎嚭 鈫?鍙€夎澶囬瑙堚€濇暣鍚堝埌涓€涓湰鍦板伐鍏烽噷銆?
-椤圭洰榛樿鏈湴杩愯锛屼笉浼氳嚜鍔ㄤ笂浼犺棰戙€佽剼鏈€佽缁冩暟鎹垨鐢熸垚缁撴灉銆?
-### 涓昏鍔熻兘
+> 这是一个 Alpha / Preview 预发布版本，仍在快速迭代中。建议先在测试目录中解压运行。
 
-- 鏈湴瑙嗛瀵煎叆涓庢挱鏀?- 涓撲笟鏇茬嚎鏃堕棿杞寸紪杈戝櫒
-- 鎾斁澶村悓姝ャ€佺缉鏀俱€佹嫋鍔ㄣ€佽妭鐐圭紪杈?- funscript 瀵煎叆涓庡鍑?- 鍚岀洰褰曞悓鍚嶈剼鏈嚜鍔ㄥ鍏?- 澶氳酱鑴氭湰鍩虹鏀寔锛氬崌闄嶃€佸墠鍚庛€佸乏鍙炽€佹棆杞€佷晶鍊俱€佷刊浠?- 蹇€熻妭鎷嶇敓鎴?- 鎰熺煡灞傚垎鏋?- 娣峰悎鐢熸垚 / Hybrid Generate
-- 娣峰悎妯″紡 +2銆侀珮鑳芥ā寮忋€佽妭鎷嶄紭鍏堟ā寮?- 璁粌闆嗗鍏ャ€佸弬鏁版嫙鍚堛€佺浉浼肩墖娈靛尮閰?- 璐ㄩ噺璇勪及鎸囨爣
-- 鏈湴 Python 鍚庣
-- 鍙€?OSR2 / SR6 T-Code USB 涓插彛杈撳嚭
-- 璁惧杞村悜闄愪綅淇濆瓨涓庡疄鏃朵綅缃樉绀?- 绐楀彛鍖?/ 鍏ㄥ睆闈欓煶棰勮闀滃儚
-- Windows 渚挎惡棰勮鐗堟墦鍖?
-### 涓嬭浇
+## 中文
 
-璇峰湪 [Releases](https://github.com/Atani0/funscript-studio/releases) 椤甸潰涓嬭浇锛?
-- `FunscriptStudio-Portable-Windows-0.1.0-alpha.1.zip`锛歐indows 渚挎惡鐗堬紝瑙ｅ帇鍚庤繍琛屻€?- `FunscriptStudio-Source-0.1.0-alpha.1.zip`锛氱敤浜庝唬鐮佸鏌ャ€佸涔犲拰浜屾寮€鍙戠殑婧愮爜鍖呫€?
-### 鏋舵瀯姒傝
+### 项目简介
+
+Funscript Studio 使用 Electron + React + TypeScript 构建桌面 UI，并通过本地 Python 后端进行音频、视频、人体动作、互动强度和镜头感知分析。它的目标是把“视频 → 自动生成脚本 → 可视化编辑 → 导出 → 可选设备预览”整合到一个本地工具里。
+
+项目默认本地运行，不会自动上传视频、脚本、训练数据或生成结果。
+
+### 主要功能
+
+- 本地视频导入与播放
+- 专业曲线时间轴编辑器
+- 播放头同步、缩放、拖动、节点编辑
+- funscript 导入与导出
+- 同目录同名脚本自动导入
+- 多轴脚本基础支持：升降、前后、左右、旋转、侧倾、俯仰
+- 快速节拍生成
+- 感知层分析
+- 混合生成 / Hybrid Generate
+- 混合模式 +2、高能模式、节拍优先模式
+- 训练集导入、参数拟合、相似片段匹配
+- 质量评估指标
+- 本地 Python 后端
+- 可选 OSR2 / SR6 T-Code USB 串口输出
+- 设备轴向限位保存与实时位置显示
+- 窗口化 / 全屏静音预览镜像
+- Windows 便携预览版打包
+
+### 下载
+
+请在 [Releases](https://github.com/Atani0/funscript-studio/releases) 页面下载：
+
+- `FunscriptStudio-Portable-Windows-0.1.0-alpha.1.zip`：Windows 便携版，解压后运行。
+- `FunscriptStudio-Source-0.1.0-alpha.1.zip`：用于代码审查、学习和二次开发的源码包。
+
+### 架构概览
 
 ```text
 Video + Audio
@@ -35,39 +54,46 @@ Video + Audio
   -> Optional local T-Code device bridge
 ```
 
-涓昏鐩綍锛?
-- `electron/`锛欵lectron 涓昏繘绋嬪拰 preload 妗ユ帴
-- `src/`锛歊eact + TypeScript 鍓嶇鐣岄潰
-- `backend/`锛氭湰鍦?Python HTTP 鍚庣
-- `backend/perception/`锛氭劅鐭ュ眰鏃堕棿绾跨敓鎴?- `backend/generation/`锛氫簨浠舵彁鍙栥€佽繍鍔ㄨ鍒掋€佸姩浣滃悎鎴愩€佽川閲忚瘎浼?- `backend/learning/`锛氳缁冮泦銆佸涔犻厤缃€佺浉浼肩墖娈电储寮?- `scripts/`锛氬畨瑁呫€佸惎鍔ㄣ€佷究鎼虹増鎵撳寘鑴氭湰
+主要目录：
 
-### 瀹夎涓庤繍琛?
-鎺ㄨ崘鐜锛?
+- `electron/`：Electron 主进程和 preload 桥接
+- `src/`：React + TypeScript 前端界面
+- `backend/`：本地 Python HTTP 后端
+- `backend/perception/`：感知层时间线生成
+- `backend/generation/`：事件提取、运动规划、动作合成、质量评估
+- `backend/learning/`：训练集、学习配置、相似片段索引
+- `scripts/`：安装、启动、便携版打包脚本
+
+### 安装与运行
+
+推荐环境：
+
 - Windows 10 / 11
 - Node.js 18+
 - pnpm
 - Python 3.10+
-- FFmpeg锛屾垨椤圭洰涓殑 `ffmpeg-static` 渚濊禆
+- FFmpeg，或项目中的 `ffmpeg-static` 依赖
 
-瀹夎渚濊禆锛?
+安装依赖：
+
 ```powershell
 .\install.bat
 ```
 
-鍚姩棰勮鐗堬細
+启动预览版：
 
 ```powershell
 .\start.bat
 ```
 
-寮€鍙戞ā寮忥細
+开发模式：
 
 ```powershell
 pnpm install
 pnpm run dev
 ```
 
-杩愯妫€鏌ワ細
+运行检查：
 
 ```powershell
 pnpm run typecheck
@@ -75,35 +101,56 @@ pnpm run build
 python -m pytest tests
 ```
 
-鏋勫缓 Windows 渚挎惡棰勮鍖咃細
+构建 Windows 便携预览包：
 
 ```powershell
 .\build-preview.bat
 ```
 
-杈撳嚭鏂囦欢浼氱敓鎴愬湪 `outputs/` 鐩綍涓嬨€?
-### 闅愮璇存槑
+输出文件会生成在 `outputs/` 目录下。
 
-- 杞欢榛樿鏈湴浼樺厛銆?- 涓嶄細鑷姩涓婁紶鐢ㄦ埛瑙嗛銆乫unscript銆佽缁冮泦銆佹劅鐭ュ眰 JSON銆佸涔犻厤缃垨鐢熸垚缁撴灉銆?- 鐢ㄦ埛鏁版嵁鐩綍涓嶅簲鎻愪氦鍒?GitHub銆?- 濡傛灉鏈潵鍔犲叆澶栭儴 API锛岀敤鎴峰繀椤绘墜鍔ㄩ厤缃苟鐞嗚В闅愮椋庨櫓銆?
-### 璁惧鎺у埗瀹夊叏璇存槑
+### 隐私说明
 
-璁惧杈撳嚭浠嶆槸瀹為獙鍔熻兘锛岃璋ㄦ厧浣跨敤銆?
-- 杩炴帴瀹炰綋璁惧鍓嶏紝璇峰厛璁剧疆杞村悜闄愪綅銆佹尟骞呫€侀€熷害鍜岄鐜囪寖鍥淬€?- 寤鸿鍏堢敤棰勮妯″紡妫€鏌ヨ剼鏈€?- 椤圭洰涓嶅澶栭儴璁惧鎴栦笉瀹夊叏闄愪綅閫犳垚鐨勯闄╄礋璐ｃ€?- 榛樿闄愪綅杈冧繚瀹堬紝鐢ㄦ埛鍙互鍦ㄨ澶囪皟璇曢潰鏉夸腑璋冩暣銆?
-### 褰撳墠鐘舵€?
-鐘舵€侊細**Alpha**
+- 软件默认本地优先。
+- 不会自动上传用户视频、funscript、训练集、感知层 JSON、学习配置或生成结果。
+- 用户数据目录不应提交到 GitHub。
+- 如果未来加入外部 API，用户必须手动配置并理解隐私风险。
 
-宸茬煡闄愬埗锛?
-- 鑷姩鐢熸垚鑴氭湰璐ㄩ噺浠嶅彲鑳戒笉绋冲畾銆?- 鎰熺煡灞傚鐪熶汉銆?D 鍔ㄧ敾銆?D 鍔ㄧ敾銆佸壀杈戣棰戠殑璇嗗埆鏁堟灉涓嶅悓銆?- 褰撳墠瀛︿範妯″潡浠ュ弬鏁版嫙鍚堝拰鐩镐技鐗囨鍖归厤涓轰富锛屽皻鏈唴缃繁搴﹀涔犳ā鍨嬨€?- 榛樿涓嶅寘鍚ず渚嬭棰戙€佹牱鏈剼鏈垨璁粌鏁版嵁銆?- 璁惧鏀寔鍙栧喅浜庣郴缁熶覆鍙ｃ€佺‖浠跺拰鐢ㄦ埛鎺堟潈銆?- 閮ㄥ垎瑙嗛鏍煎紡浼氶€氳繃 FFmpeg 杞崲涓烘湰鍦颁复鏃?MP4 棰勮銆?
-璺嚎鍥撅細
+### 设备控制安全说明
 
-- 鏇村ソ鐨勬劅鐭ュ眰鐗瑰緛楠岃瘉宸ュ叿
-- 鏇寸ǔ瀹氱殑娣峰悎鐢熸垚閰嶇疆
-- 鏇村畨鍏ㄧ殑璁惧妯℃嫙鍜屾牎鍑嗘祦绋?- 鏇存竻鏅扮殑鎻掍欢 / 妯″瀷鎵╁睍鎺ュ彛
-- 淇濇寔鏈湴浼樺厛鐨勫墠鎻愪笅锛岄鐣欐湭鏉ユ繁搴︽ā鍨嬫帴鍏ヨ兘鍔?
-### 瀹夊叏涓庤础鐚?
-- 瀹夊叏璇存槑璇烽槄璇?[SECURITY.md](SECURITY.md)
-- 璐＄尞鎸囧崡璇烽槄璇?[CONTRIBUTING.md](CONTRIBUTING.md)
-- 璁稿彲璇侊細MIT锛岃 [LICENSE](LICENSE)
+设备输出仍是实验功能，请谨慎使用。
+
+- 连接实体设备前，请先设置轴向限位、振幅、速度和频率范围。
+- 建议先用预览模式检查脚本。
+- 项目不对外部设备或不安全限位造成的风险负责。
+- 默认限位较保守，用户可以在设备调试面板中调整。
+
+### 当前状态
+
+状态：**Alpha**
+
+已知限制：
+
+- 自动生成脚本质量仍可能不稳定。
+- 感知层对真人、3D 动画、2D 动画、剪辑视频的识别效果不同。
+- 当前学习模块以参数拟合和相似片段匹配为主，尚未内置深度学习模型。
+- 默认不包含示例视频、样本脚本或训练数据。
+- 设备支持取决于系统串口、硬件和用户授权。
+- 部分视频格式会通过 FFmpeg 转换为本地临时 MP4 预览。
+
+路线图：
+
+- 更好的感知层特征验证工具
+- 更稳定的混合生成配置
+- 更安全的设备模拟和校准流程
+- 更清晰的插件 / 模型扩展接口
+- 保持本地优先的前提下，预留未来深度模型接入能力
+
+### 安全与贡献
+
+- 安全说明请阅读 [SECURITY.md](SECURITY.md)
+- 贡献指南请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)
+- 许可证：MIT，见 [LICENSE](LICENSE)
 
 ---
 
@@ -117,7 +164,7 @@ Current version: **0.1.0-alpha.1**
 
 ### Overview
 
-Funscript Studio combines an Electron + React + TypeScript desktop UI with a local Python backend for audio, video, body-motion, interaction, and shot-level perception analysis. The long-term goal is to provide a local workflow for 鈥渧ideo 鈫?generated script 鈫?visual editing 鈫?export 鈫?optional device preview鈥?
+Funscript Studio combines an Electron + React + TypeScript desktop UI with a local Python backend for audio, video, body-motion, interaction, and shot-level perception analysis. The long-term goal is to provide a local workflow for “video → generated script → visual editing → export → optional device preview”.
 
 The project is local-first by default. It does not automatically upload videos, scripts, training data, or generated outputs.
 
